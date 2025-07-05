@@ -1,4 +1,4 @@
-# Sample-level Adaptive Knowledge Distillation for Action Recognition
+# Official code for ACM Multimedia 2025 Paper "Sample-level Adaptive Knowledge Distillation for Action Recognition"
 
 
 ## Introduction
@@ -78,7 +78,20 @@ Next, run `python ucf101_slowfast_ac.py  --batch_size 16 --model slowfast_resnet
 </p>
 
 Qualitative comparison between the baseline and our distilling method on UCF101
+## Citation
 
+```
+@inproceedings{li-mm2025-sakd, 
+  author    = {Ping Li and Chenhao Ping and Wenxiao Wang and Mingli Song},
+  title     = {Sample-level adaptive knowledge distillation for action recognition},
+booktitle   = {Proceedings of the 33rd ACM International Conference on Multimedia (ACM MM)},
+  pages     = {in press},
+  year      = {2025}
+}
+```
+
+## Contact
+If you have any questions, please feel free to contact Mr. Chenhao Ping via email( [232050149@hdu.edu.cn](mailto:232050149@hdu.edu.cn).). 
 
 ## Acknowledgement
 We would like to thank the authors of [TT]( https://github.com/zhipeng-wei/TT) which has significantly accelerated the development of our KD Method.
