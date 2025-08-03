@@ -1,7 +1,9 @@
-# Official code for ACM Multimedia 2025 Paper "Sample-level Adaptive Knowledge Distillation for Action Recognition"
+# Official code for ACM MM'25 Paper "Sample-level Adaptive Knowledge Distillation for Action Recognition"
+[![Python](https://img.shields.io/badge/Python-3.8.19-blue)](https://www.python.org/)  [![PyTorch](https://img.shields.io/badge/PyTorch-1.7-blue)](https://pytorch.org/) 
 
+[[arXiv paper]](https://arxiv.org/abs/2504.00606) [[Appendix]](./mm25_sakd_appendix.pdf)  * Click the Appendix link and download pdf in new page.
 
-## Introduction
+## Abstract
 
 Knowledge Distillation (KD) compresses neural networks by learning a small network (student) via transferring knowledge from a pre-trained large network (teacher). Many endeavours have been devoted to the image domain, while few works focus on video analysis which desires training much larger model making it be hardly deployed in resource-limited devices. However, traditional methods neglect two important problems, i.e., 1) Since the capacity gap between the teacher and the student exists, some knowledge w.r.t. difficult-to-transfer samples cannot be correctly transferred, or even badly affects the final performance of student, and 2) As training progresses, difficult-to-transfer samples may become easier to learn, and vice versa. To alleviate the two problems, we propose a Sample-level Adaptive Knowledge Distillation (SAKD) framework for action recognition. In particular, it mainly consists of the sample distillation difficulty evaluation module and the sample adaptive distillation module. The former applies the temporal interruption to frames, i.e., randomly dropout or shuffle the frames during training, which increases the learning difficulty of samples during distillation, so as to better discriminate their distillation difficulty. The latter module adaptively adjusts distillation ratio at sample level, such that KD loss dominates the training with easy-to-transfer samples while vanilla loss dominates that with difficult-to-transfer samples. More importantly, we only select those samples with both low distillation difficulty and high diversity to train the student model for reducing computational cost. Experimental results on two video benchmarks and one image benchmark demonstrate the superiority of the proposed method by striking a good balance between performance and efficiency.
 
@@ -90,7 +92,7 @@ Next, run `python ucf101_slowfast_ac.py  --batch_size 16 --model slowfast_resnet
     <img src="fig/slowfast_vis_ucf101.png" width="600"> <br>
 </p>
 
-Qualitative comparison between the baseline and our distilling method on UCF101
+Qualitative comparison between the baseline and our KD method on UCF101
 ## Citation
 
 ```
@@ -104,11 +106,10 @@ booktitle   = {Proceedings of the 33rd ACM International Conference on Multimedi
 ```
 
 ## Contact
-If you have any questions, please feel free to contact Mr. Chenhao Ping via email( [pch@hdu.edu.cn](mailto:pch@hdu.edu.cn).). 
+If you have any questions, please feel free to contact Mr. Chenhao Ping via email([pch@hdu.edu.cn](mailto:pch@hdu.edu.cn)). 
 
 ## Acknowledgement
-We would like to thank the authors of [TT]( https://github.com/zhipeng-wei/TT) which has significantly accelerated the development of our KD Method.
+We would like to thank the authors of [TT] (https://github.com/zhipeng-wei/TT), which has significantly accelerated the development of our SAKD Method.
 
 ## License
-
 This project is licensed under the MIT License. See the [LICENSE file](https://github.com/A4Bio/E3-CryoFold/blob/main/LICENSE) for details.
