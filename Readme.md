@@ -16,7 +16,6 @@ Knowledge Distillation (KD) compresses neural networks by learning a small netwo
 - [Dataset Requirements](#dataset-requirements)
 - [Training & Test](#training-test)
 - [Qualitative Results](#qualitative-results)
-- [Tutorial](#tutorial)
 - [Citation](#citation)
 - [Contact](#contact)
 - [Acknowledgement](#acknowledgement)
@@ -73,11 +72,11 @@ SLPKD/
 ```
 
 
-## Training&Test
-First, download the Kinetics-400 pretrained weights of Slowfast16*8 from this [link](https://pan.baidu.com/s/1Y_jfUR_t7n7r3yT5WG886w 
+## Training-Test
+Step 1: download the Kinetics-400 pretrained weights of Slowfast16*8 from this [link](https://pan.baidu.com/s/1Y_jfUR_t7n7r3yT5WG886w 
 ) (code is rsu6). Place the downloaded file inside your cloned repo directory as `checkpoint/slowfast_resnet101.pth`.
 
-Next, run `python ucf101_slowfast_ac.py  --batch_size 16 --model slowfast_resnet50 ` to train the model in the paper.
+Step 2: run `python ucf101_slowfast_ac.py  --batch_size 16 --model slowfast_resnet50 ` to train the model.
 
 ## Quantitative results on UCF101.
 
@@ -86,7 +85,6 @@ Next, run `python ucf101_slowfast_ac.py  --batch_size 16 --model slowfast_resnet
 |  KD |Slowfast| 89.88|    98.80    | 
 
 ## Qualitative results 
-
 
 <p align="center">
     <img src="fig/slowfast_vis_ucf101.png" width="600"> <br>
@@ -113,3 +111,4 @@ We would like to thank the authors of [TT] (https://github.com/zhipeng-wei/TT), 
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE file](https://github.com/A4Bio/E3-CryoFold/blob/main/LICENSE) for details.
+
